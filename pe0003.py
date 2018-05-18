@@ -13,16 +13,16 @@ def factors(n):
             factors.append((int(i), int(quotient)))
     return factors
 
+            
 def isprime(n):
-    allfactors = factors(n)
-    if len(allfactors) == 1 and allfactors[0] == (1, n):
-        # This number is prime (or 1)
-        if n == 1:
-            return False
-        else:
-            return True
-    else:
-        return False
+    # This function returns after finding only one factor
+    # Quicker than finding all factors
+    for i in range(2, int(math.sqrt(n))+1):  # Start at 2 because we are ignoring the 1 & n pair
+        quotient = n/float(i)
+        if quotient == int(quotient):
+            return False  # This number has a factor therefore is not prime
+    # If we got to the squareroot and found no integer factors, then it is prime
+    return True
 
 def largestprimefactor(n):
     if type(n) is not int:
@@ -39,4 +39,5 @@ def largestprimefactor(n):
     # print(pfactors)
     return max(pfactors)
 
-print(largestprimefactor(600851475143))
+if __name__ == "__main__":
+    print(largestprimefactor(600851475143))
