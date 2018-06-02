@@ -15,14 +15,12 @@ def pandigital19(tup):
 
 if __name__ == "__main__":
     # Perhaps we can brute force it...
-    # We need 9 digits in total so the smallest we can start is (10, 100, 1000)
-    # By (10, 1000, 10000) we have too many digits so 1000 is upper bound on multiplier
-    # By (100, 100, 10000) we have too many digits so 100 is upper bound on multiplicand
+    # We need 9 digits in total
     pandigitals = {}
-    for multiplicand in range(10, 100):
-        for multiplier in range(100, 1000):
+    for multiplicand in range(1, 100):
+        for multiplier in range(100, 10000):
             product = multiplier*multiplicand
             if pandigital19((multiplicand, multiplier, product)):
                 pandigitals[product] = (multiplicand, multiplier)
-                #print(product)
+    print(pandigitals)
     print(sum(pandigitals.keys()))
