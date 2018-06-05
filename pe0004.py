@@ -6,11 +6,12 @@ def ispallindrome(n):
             return False
     # If we reach here without returning, it is a pallindrome
     return True
-        
-# Naive approach: multiply all 3 digit numbers by all other 3 digit numbers (~ 1 million multiplications)
-pallindromes = []
-for i in range(100, 1000):
-    for j in range(100, 1000):    
-        if ispallindrome(i*j):
-            pallindromes.append(i*j)
-print(max(pallindromes))
+
+if __name__ == "__main__":
+    # Naive approach: multiply all 3 digit numbers by all other 3 digit numbers (~ 1 million multiplications)
+    pallindromes = []
+    for i in range(100, 1000):
+        for j in range(100, 1000):    
+            if ispallindrome(i*j):
+                pallindromes.append(i*j)
+    print(max(pallindromes))
