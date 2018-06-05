@@ -22,7 +22,10 @@ def isprime(n):
         if quotient == int(quotient):
             return False  # This number has a factor therefore is not prime
     # If we got to the squareroot and found no integer factors, then it is prime
-    return True
+    if n == 1:
+        return False
+    else:
+        return True
 
 def largestprimefactor(n):
     if type(n) is not int:
