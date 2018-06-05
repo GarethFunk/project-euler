@@ -20,11 +20,11 @@ def findtriplet(c):
     # If we get this far, we didn't find it
     return (0, 0)
 
-
-for c in range(1, 999):  # 999 because of range < not <=
-    a, b = findtriplet(c)
-    if a + b + c == 1000:
-        print("Found a + b + c = 1000\na*b*c = ")
-        print(a*b*c)
-        print((a, b, c))
-        break
+if __name__ == "__main__":
+    for c in range(1, 999):  # 999 because of range < not <=
+        a, b = findtriplet(c)
+        if a + b + c == 1000:
+            print("Found a + b + c = 1000\na*b*c = ")
+            print(a*b*c)
+            print((a, b, c))
+            break
