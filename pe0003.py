@@ -13,11 +13,43 @@ def factors(n):
             factors.append((int(i), int(quotient)))
     return factors
 
+# This iterator is for greatly reducing the number of divisors we check
+# when looking if a number is prime.
+# We do this by making the following deductions on a group of potential divisors 
+# for a candidate prime number:
+# 7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
+# ^            ^     ^           ^     ^           ^     ^           ^     ^           ^     ^    
+# Starting at 7 we have jumps of [4, 2] repeating which give us a sequence of numbers 
+# Which never have a prime factor of 3 or 2
+# To skip over factors of 5 is possible but would require more logic. 
+# The extra logic in the iterator might outweigh the saving
+class pseudoprimeiterator():
+    def __init__(self, end):
+        self.end = end
+        self.current = 5
+        self.step = (4, 2)
+        self.tictoc = True
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        self.current += self.step[self.tictoc]
+        self.tictoc = not self.tictoc
+        if self.current < self.end:
+            return self.current
+        else:
+            raise StopIteration
+
             
 def isprime(n):
     # This function returns after finding only one factor
     # Quicker than finding all factors
-    for i in range(2, int(math.sqrt(n))+1):  # Start at 2 because we are ignoring the 1 & n pair
+    # Check two and three first
+    quotient = n/float(2)
+    if quotient == int(quotient):
+        return False  # This number has a factor therefore is not prime
+    for i in range(3, int(math.sqrt(n))+1, 2):
         quotient = n/float(i)
         if quotient == int(quotient):
             return False  # This number has a factor therefore is not prime
