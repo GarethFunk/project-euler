@@ -45,10 +45,13 @@ class pseudoprimeiterator():
 def isprime(n):
     # This function returns after finding only one factor
     # Quicker than finding all factors
-    # Check two and three first
+    # Check two first because it doesn't fit the pattern
     quotient = n/float(2)
     if quotient == int(quotient):
-        return False  # This number has a factor therefore is not prime
+        if n != 2:
+            return False  # This number is divisble by 2
+        else:
+            return True
     for i in range(3, int(math.sqrt(n))+1, 2):
         quotient = n/float(i)
         if quotient == int(quotient):
