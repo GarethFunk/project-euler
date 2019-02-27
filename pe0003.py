@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import math
 
 def factors(n):
@@ -15,7 +16,7 @@ def factors(n):
 
 # This iterator is for greatly reducing the number of divisors we check
 # when looking if a number is prime.
-# We do this by making the following deductions on a group of potential divisors 
+# We do this by making the following deductions on a group of potential divisors
 # for a candidate prime number:
 # 7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
 # ^            ^     ^           ^     ^           ^     ^           ^     ^           ^     ^    
@@ -40,6 +41,9 @@ class pseudoprimeiterator():
             return self.current
         else:
             raise StopIteration
+    
+    def next(self):
+        return self.__next__()
 
             
 def isprime(n):
@@ -63,7 +67,7 @@ def isprime(n):
         return True
 
 def largestprimefactor(n):
-    if type(n) is not int:
+    if type(n) is not int and type(n) is not long:
         raise TypeError
     allfactors = factors(n)
     # Now we have a list of factor pairs (non-prime)
