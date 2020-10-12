@@ -1,4 +1,4 @@
-from pe0003 import isprime
+from lib import isprime
 
 if __name__ == "__main__":
     spiral_side_length = 1

@@ -1,4 +1,4 @@
-from pe0003 import isprime
+from lib import isprime
 
 
 def rotate(s):

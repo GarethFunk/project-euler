@@ -6,7 +6,7 @@
 
 from itertools import permutations
 
-from pe0003 import isprime
+from lib import isprime
 
 
 def findequispaced(nums):

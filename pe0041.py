@@ -4,7 +4,7 @@
 
 from itertools import permutations
 
-from pe0003 import isprime
+from lib import isprime
 
 digits = "123456789"
 if __name__ == "__main__":

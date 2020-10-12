@@ -1,7 +1,7 @@
 from copy import deepcopy
 from itertools import combinations, combinations_with_replacement
 
-from pe0003 import isprime
+from lib import isprime
 
 
 def digitreplace(n, checkprime=False):

@@ -2,7 +2,7 @@
 # So we need a list of prime numbers below or up to 1,000.
 # Prime numbers are all positive so we can take that into account
 
-from pe0003 import isprime
+from lib import isprime
 
 primes = []
 for i in range(2, 1001):

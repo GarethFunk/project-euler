@@ -1,4 +1,4 @@
-from pe0003 import isprime
+from lib import isprime
 
 # let's see if we can just check all odd numbers below 2,000,000
 s = 2  # Sum starts at 2 because we're missing 2 out of the range

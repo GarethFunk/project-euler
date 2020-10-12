@@ -5,7 +5,7 @@
 
 from copy import deepcopy
 
-from pe0003 import isprime
+from lib import isprime
 
 
 def getprimes(n=None, below=None):

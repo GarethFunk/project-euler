@@ -1,6 +1,6 @@
 from math import sqrt
 
-from pe0003 import isprime
+from lib import isprime
 
 
 def isint(n):
