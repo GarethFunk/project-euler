@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 class PlayingCard():
     def __init__(self, card_code, ace_high=True):
         self.value = self.valueconverter(card_code[0], ace_high)

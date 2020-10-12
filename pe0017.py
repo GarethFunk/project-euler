@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Let's not reinvent the wheel here
 import num2words
 

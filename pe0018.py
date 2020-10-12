@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # We can search though it intelligently or by brute force
 # Intelligent thoughts:
 # We know we will be adding 15 numbers together and we know the largest number that occurs is 99

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from lib import isprime
 
 # let's see if we can just check all odd numbers below 2,000,000

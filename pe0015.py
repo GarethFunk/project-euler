@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # This problem can be rephrased quite simply thus:
 # You have two numbers (i, j) and each one can increase one at a time by 1 each time
 # There are six unique sequences starting at (0, 0) and ending at (2, 2)

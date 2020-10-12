@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # approx 36,500 days in 20th century so let's just run through them all!
 
 def daysinmonth(year, month):

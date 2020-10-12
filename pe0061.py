@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 class Polygonal():
     def __init__(self, order, max_digits=None):

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def isevenlydivisible(n, maxdivisor):
     for i in range(1, maxdivisor+1):    # +1 to include final value
         if n % i != 0:

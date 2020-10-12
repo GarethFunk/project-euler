@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # We could devise an algorithm to come up with all the different ways
 # There are too many ways (when you keep order in mind)
 # We need a way to find the ways agnostic to order of coins

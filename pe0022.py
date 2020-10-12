@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 f = open("pe0022_names.txt")
 raw = f.read()
 f.close()

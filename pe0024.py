@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # There are 10! = 3,628,800 permutations of characters 0 1 2 3 4 5 6 7 8 9
 # We can generate these permutations in lexicographic order
 # There are 9!  = 362,880 permutations for each starting digit

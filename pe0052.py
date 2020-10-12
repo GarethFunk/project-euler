@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 def getdigits(n):
     # Returns a sorted list of the digits

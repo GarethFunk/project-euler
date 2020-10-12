@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # We will use this structure to store multiplicand, multiplier, product
 # (multiplicand, multiplier, product)
 

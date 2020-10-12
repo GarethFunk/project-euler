@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from lib import isprime
 
 # Let's just run through all the odd natural numbers starting at 3

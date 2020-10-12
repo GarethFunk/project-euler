@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # I expect we will retrace our steps a lot here because when a number comes up, if we've
 # come accross it before, we have alraedy calculated the whole sequence.
 # All that needs to be stored is the length of the sequence from that number to 1

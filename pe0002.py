@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def sumevenfib(n):
     fib = [1, 2]
     s = 2

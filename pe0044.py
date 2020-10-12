@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """
 P(k) + P(j) = P(m)
 P(k) - P(j)) = P(n)

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 def nthdigit(n):
     counter = 0

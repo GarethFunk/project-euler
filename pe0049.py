@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # We need to find three four digit numbers that are prime,
 # permutations of each other and are equispaced.
 # We could run through all 4-digit numbers starting at 1000

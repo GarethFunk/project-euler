@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 def pandigital(s):
     if len(s) != 9:

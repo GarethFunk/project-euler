@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Find all right angled triangles with p <= 1000
 
 from pe0009 import findtriplet

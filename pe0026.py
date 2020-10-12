@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # For this we need a recurrence finding algorithm
 # We would first need to determine if the decimal terminates
 # We know, because all these decimals are rational that they either terminate or reccur.

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 def digitsum(n):
     s = str(n)

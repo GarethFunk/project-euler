@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # The number clearnly needs to have 2 or more digits, but what's the upper bound?
 # Let's keep going up to 1,000,000 and see where we get to.
 # There was one six digit number which worked and two four digit numbers.

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Let's just generate fibonacci numbers until we find one with more than 1000 digits
 curr = 1
 prev = 1

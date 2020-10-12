@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from lib import isprime
 from pe0050 import getprimes
 

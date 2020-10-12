@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Getting all primes with < 10 digits takes way too much time
 # Get all pandigital numbers < 10 digits then check for primeness
 # Certainly quicker to generate pandigital numbers than to iterate and find them

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from pe0004 import ispallindrome
 
 

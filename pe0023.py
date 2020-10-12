@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from pe0021 import d
 
 # All numbers between 1 and 28,123 (inclusive) may or may not be expressed as the sum of two abundant numbers

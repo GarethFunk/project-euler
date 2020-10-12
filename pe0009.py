@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # How to find Pythagorean triplet s.t. a + b + c = 1000 ?
 # Largest number for a, b, or c naievely is 998 (with the other two being 1)
 # Let's say c <= 998. We can find pythagorean triplets for c = 1 to 998 (if they exist)

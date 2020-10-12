@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # for n^2 + an + b to give consecutive primes starting at n = 0, b must always be prime
 # So we need a list of prime numbers below or up to 1,000.
 # Prime numbers are all positive so we can take that into account

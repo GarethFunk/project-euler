@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from pe0018 import maxtrianglesum
 
 triangle = [[59],

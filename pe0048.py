@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # We don't need to do anything too clever here
 
 n = 0

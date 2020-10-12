@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # A simple approach might be to, starting at 2 add up all the primes,
 # checking if the sum is prime at each step, until the sum exceeds 1,000,000
 # Then to repeat starting at 3, starting at 5 etc. and compare results

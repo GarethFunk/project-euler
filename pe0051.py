@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from copy import deepcopy
 from itertools import combinations, combinations_with_replacement
 

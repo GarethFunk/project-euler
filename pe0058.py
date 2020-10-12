@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from lib import isprime
 
 if __name__ == "__main__":

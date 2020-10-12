@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # a 16 digit string is formed by putting the only 2 digit number, 10,
 # in one of the outer rings, otherwise it would be double counted forming
 # a 17 digit string

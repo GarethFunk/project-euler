@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from itertools import permutations
 
 digits = "0123456789"

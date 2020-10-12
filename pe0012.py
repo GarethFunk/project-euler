@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from lib import factors
 
 i = 1  # Index of triangle number

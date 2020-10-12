@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 def ispallindrome(n):
     s = str(n)

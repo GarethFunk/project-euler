@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # The digit factorial sum of a number does not scale with the size of the number
 # 10^362879 has the same digit factorial sum as 9
 # For an n digit number, the smallest digit factorial sum is n 1's
