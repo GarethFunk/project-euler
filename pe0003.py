@@ -1,18 +1,6 @@
 # -*- coding: utf-8 -*-
 import math
-
-def factors(n):
-    # Factors will range from 1 and n to sqrt(n) and sqrt(n) and are in pairs
-    # Check range 1 to sqrt(n) to find all factor pairs
-    factors = []
-    for i in range(1, int(math.sqrt(n))+1):  # int() will round down, this is desired.
-        # We want to include the squareroot value in the loop hence +1 in range statement
-        # Check if it is a factor
-        quotient = n/float(i)
-        if quotient == int(quotient):
-            # The quotient is an integer therefore i is a factor
-            factors.append((int(i), int(quotient)))
-    return factors
+from lib import factors, isprime
 
 # This iterator is for greatly reducing the number of divisors we check
 # when looking if a number is prime.
@@ -44,27 +32,6 @@ class pseudoprimeiterator():
     
     def next(self):
         return self.__next__()
-
-            
-def isprime(n):
-    # This function returns after finding only one factor
-    # Quicker than finding all factors
-    # Check two first because it doesn't fit the pattern
-    quotient = n/float(2)
-    if quotient == int(quotient):
-        if n != 2:
-            return False  # This number is divisble by 2
-        else:
-            return True
-    for i in range(3, int(math.sqrt(n))+1, 2):
-        quotient = n/float(i)
-        if quotient == int(quotient):
-            return False  # This number has a factor therefore is not prime
-    # If we got to the squareroot and found no integer factors, then it is prime
-    if n == 1:
-        return False
-    else:
-        return True
 
 def largestprimefactor(n):
     if type(n) is not int and type(n) is not long:

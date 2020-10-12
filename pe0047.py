@@ -1,6 +1,6 @@
-from pe0003 import factors, isprime
+from lib import factors, isprime
 
-def primefactors(n, conv=False):
+def primeFactors(n, conv=False):
     prime_factors = {}
     for pair in factors(n):
         for num in pair:
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     found = False
     consecutive = False
     while found is False:
-        pf = primefactors(n, True)
+        pf = primeFactors(n, True)
         if len(pf) != 4:
             consecutive = False
         else:

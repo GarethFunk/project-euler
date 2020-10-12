@@ -1,4 +1,4 @@
-from pe0003 import factors
+from lib import factors
 
 def d(n):
     # Sum of proper divisors of n

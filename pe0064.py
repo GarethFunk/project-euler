@@ -63,9 +63,9 @@ class ContinuedFractionSquareRoot:
 
     def __cancelFraction(self):
         # Check common factors and cancel.
-        b_factors = primefactors(self.b)
-        c_factors = primefactors(self.c)
-        d_factors = primefactors(self.d)
+        b_factors = primeFactors(self.b)
+        c_factors = primeFactors(self.c)
+        d_factors = primeFactors(self.d)
         common_prime_factors = set(b_factors.keys()).intersection(set(c_factors.keys())).intersection(set(d_factors.keys()))
         for common_prime_factor in common_prime_factors:
             # Find the most times the common factor is shared

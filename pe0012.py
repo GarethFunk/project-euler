@@ -1,4 +1,4 @@
-from pe0003 import factors
+from lib import factors
 
 i = 1  # Index of triangle number
 n = 1  # The ith triangle number
