@@ -22,18 +22,21 @@ also pentagon numbers will minimise the difference
 
 from math import sqrt
 
+
 def p(n):
     return int((n*((3*n) - 1))/2)
+
 
 def ispentagon(p):
     # 3n^2 - n - 2p = 0
     # (1 ± sqrt(1 + 24*p))/6 = n
     # n > 0 so take +ve square root
     # 1 + sqrt(1 + 24p) = 6n
-    if (1 + sqrt(1 + (24*p)))%6 == 0:
+    if (1 + sqrt(1 + (24*p))) % 6 == 0:
         return True
     else:
         return False
+
 
 if __name__ == "__main__":
     pentagons = [p(1)]

@@ -3,8 +3,10 @@
 # All that needs to be stored is the length of the sequence from that number to 1
 # Let's use a dict for this with key = number and value = length of rest of sequence
 
-known_collatz = {1: 1} # We can initialise this edge case so we always terminate
+# We can initialise this edge case so we always terminate
+known_collatz = {1: 1}
 longest_chain = (1, 1)
+
 
 def collatz(n):
     global longest_chain
@@ -12,16 +14,17 @@ def collatz(n):
         #print("It is known.")
         return known_collatz[n]
     m = 0  # Next term in the sequence
-    if n%2 == 0:  # If even
+    if n % 2 == 0:  # If even
         m = int(n/2)
     else:
         m = int((3*n) + 1)
-    #print(m)
+    # print(m)
     length = collatz(m) + 1
     known_collatz.update({n: length})
     if length > longest_chain[1]:
         longest_chain = (n, length)
     return length
+
 
 # Now work out the lengths of sequences starting between 1 and 1,000,000
 for n in range(1, 1000000):

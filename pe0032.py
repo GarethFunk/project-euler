@@ -7,11 +7,12 @@ def pandigital19(tup):
     s += str(tup[1])
     s += str(tup[2])
     if len(s) != 9:
-        return False 
+        return False
     for digit in "123456789":
         if digit not in s:
             return False
     return True
+
 
 if __name__ == "__main__":
     # Perhaps we can brute force it...

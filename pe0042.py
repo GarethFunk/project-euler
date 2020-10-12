@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 def istriangle(t):
     # It's a quadratic equaltion an^2 + bn + c = 0
     # a = 0.5, b = 0.5, c = -t
@@ -11,6 +12,7 @@ def istriangle(t):
         return int(n)
     else:
         return 0
+
 
 if __name__ == "__main__":
     f = open("pe0042_words.txt")

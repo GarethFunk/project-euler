@@ -1,12 +1,15 @@
 from pe0003 import isprime
 
+
 def truncateleft(n):
     s = str(n)
     return int(s[1:])
 
+
 def truncateright(n):
     s = str(n)
     return int(s[:-1])
+
 
 if __name__ == "__main__":
     truncatable_primes = []

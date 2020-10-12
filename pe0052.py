@@ -3,6 +3,7 @@ def getdigits(n):
     # Returns a sorted list of the digits
     return sorted(list(str(n)))
 
+
 if __name__ == "__main__":
     n = 0
     found = False

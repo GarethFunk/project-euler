@@ -6,4 +6,3 @@ for i in range(len(string)):
     s += int(string[i])
 
 print(s)
-

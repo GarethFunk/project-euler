@@ -1,6 +1,7 @@
 import numpy as np
 from collections import OrderedDict
 
+
 class Cube():
     def __init__(self, stop=None):
         self.i = 0
@@ -15,9 +16,10 @@ class Cube():
     def __iter__(self):
         self.i = 0
         return self
-    
+
     def next(self):
         return self.__next__()
+
 
 def digitSet(n):
     digits = list(str(n))
@@ -25,7 +27,6 @@ def digitSet(n):
     for d in "0123456789":
         digit_dict.update([(d, digits.count(d))])
     return digit_dict
-
 
 
 if __name__ == "__main__":
@@ -47,5 +48,3 @@ if __name__ == "__main__":
                 print(i+1)
                 print((i+1)**3)
             break
-
-    

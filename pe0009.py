@@ -20,6 +20,7 @@ def findtriplet(c):
     # If we get this far, we didn't find it
     return (0, 0)
 
+
 if __name__ == "__main__":
     for c in range(1, 999):  # 999 because of range < not <=
         a, b = findtriplet(c)

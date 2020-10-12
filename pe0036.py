@@ -1,7 +1,9 @@
 from pe0004 import ispallindrome
 
+
 def binary(n):
     return int(bin(n)[2:])
+
 
 if __name__ == "__main__":
     base10_pallindromes = []
@@ -15,5 +17,6 @@ if __name__ == "__main__":
     for pallindrome in base10_pallindromes:
         if ispallindrome(binary(pallindrome)):
             base10_base2_pallindromes.append(pallindrome)
-    print("Found " + str(len(base10_base2_pallindromes)) + " base 10 & base 2 pallindromes...")
+    print("Found " + str(len(base10_base2_pallindromes)) +
+          " base 10 & base 2 pallindromes...")
     print(sum(base10_base2_pallindromes))

@@ -4,18 +4,22 @@ from pe0050 import getprimes
 from copy import deepcopy
 from itertools import permutations, combinations, product
 
+
 def concatenate(x):
     return int(str(x[0]) + str(x[1]))
+
 
 def findValidSets(input_set, member_length):
     # Takes in an iterable of iterables (preferably set of frozensets)
     # Gives back only those which have the prime pair set property
-    num_permutations = len(list(permutations([0]*member_length, 2)))  # A bit gross
+    num_permutations = len(
+        list(permutations([0]*member_length, 2)))  # A bit gross
     print("Searching through " + str(len(input_set)) + " possible combinations...")
     valid_sets = set()
     for primes in input_set:
         num_prime_pairs = 0
-        for x in permutations(primes, 2):  # This will give us the pairs both ways round
+        # This will give us the pairs both ways round
+        for x in permutations(primes, 2):
             if isprime(concatenate(x)):
                 num_prime_pairs += 1
             else:
@@ -24,6 +28,7 @@ def findValidSets(input_set, member_length):
                 # All the pairs we checked were prime
                 valid_sets.add(frozenset(primes))
     return valid_sets
+
 
 def combineSets(input_sets, pairs):
     output_set = set()
@@ -39,7 +44,8 @@ def combineSets(input_sets, pairs):
             number_of_matching_pairs.append(len(matching_item_pairs))
         # Now, we must find an element (not from the input_set) in each list that appears in all lists
         # Might as well just check the shortest list seeing as it must be in that one anyway
-        element_index_with_smallest_list = number_of_matching_pairs.index(min(number_of_matching_pairs))
+        element_index_with_smallest_list = number_of_matching_pairs.index(
+            min(number_of_matching_pairs))
         shortest_list_of_pairs = pairs_with_matching_items[element_index_with_smallest_list]
         for candidate_pair in shortest_list_of_pairs:
             element_to_ignore = input_set[element_index_with_smallest_list]
@@ -61,7 +67,7 @@ def combineSets(input_sets, pairs):
                         number_of_times_found_candidate_number += 1
                         found_num = True
                         break
-                # If we haven't found it in a given list, we can stop checking that candidate number. 
+                # If we haven't found it in a given list, we can stop checking that candidate number.
                 if found_num is False:
                     break
             if number_of_times_found_candidate_number == number_of_times_to_find_candidate_number:
@@ -69,9 +75,10 @@ def combineSets(input_sets, pairs):
                 output_set.add(frozenset(input_set + [candidate_number]))
     return output_set
 
+
 if __name__ == "__main__":
     # Basic approach (after many failed attempts):
-    # Get a list of pairs of primes which have the desired property. 
+    # Get a list of pairs of primes which have the desired property.
     # From this list, find triples with the property by combining pairs based on elements in common
     # Then find quadruples with the property by combining triples with pairs based on elements in common
     # Then find quintuples with the property by combining quadruples with pairs based on elements in common

@@ -8,6 +8,7 @@
 
 from pe0020 import factorial
 
+
 def nthlexicographicpermutation(n, m):
     # m is the number of consecutive digits starting at 0
     if n > factorial(m):
@@ -33,7 +34,6 @@ def nthlexicographicpermutation(n, m):
     for mult in multipliers:
         permutation += str(digits.pop(mult))
     return permutation
-
 
 
 if __name__ == "__main__":

@@ -30,13 +30,14 @@ print(len(perfects))
 
 sums = []
 for i, ab1 in enumerate(abundants, 1):
-    for ab2 in  abundants[:i]:
+    for ab2 in abundants[:i]:
         sums.append(ab1+ab2)
 
-print(len(sums)) # To check it's as many as we'd expect
+print(len(sums))  # To check it's as many as we'd expect
 # Now let's put these in a set to remove duplicates
 sumset = set(sums)
-print(len(sumset))  # 53,871 unique numbers in here. The largest is 56,244 and the smallest is 24
+# 53,871 unique numbers in here. The largest is 56,244 and the smallest is 24
+print(len(sumset))
 
 # Now we have a way of knowing if a number can be made by adding two abundant numbers
 sumnonabundant = 0

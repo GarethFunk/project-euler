@@ -12,6 +12,7 @@ from pe0047 import primefactors
 # bN+1 = - dN*bN + (aN+1(cN^2 * n - bN^2))
 # dN+1 = cN^2 * n - bN^2
 
+
 class ContinuedFractionSquareRoot:
     def __init__(self, n):
         self.n = n
@@ -22,6 +23,7 @@ class ContinuedFractionSquareRoot:
         self.d = 1
         self.iteration = 0
         self.looped = False
+
     def __iter__(self):
         return self
 
@@ -45,7 +47,7 @@ class ContinuedFractionSquareRoot:
             self.cd_quotient_loop_start = self.c/self.d
         if self.iteration > 1:
             if self.bd_quotient_loop_start == self.b/self.d and \
-                self.cd_quotient_loop_start == self.c/self.d:
+                    self.cd_quotient_loop_start == self.c/self.d:
                 self.looped = True
         return a
 
@@ -54,7 +56,7 @@ class ContinuedFractionSquareRoot:
 
     def __nextB(self):
         return (self.__nextA() * self.__nextD()) - (self.d * self.b)
-    
+
     def __nextC(self):
         return self.d * self.c
 
@@ -66,31 +68,32 @@ class ContinuedFractionSquareRoot:
         b_factors = primeFactors(self.b)
         c_factors = primeFactors(self.c)
         d_factors = primeFactors(self.d)
-        common_prime_factors = set(b_factors.keys()).intersection(set(c_factors.keys())).intersection(set(d_factors.keys()))
+        common_prime_factors = set(b_factors.keys()).intersection(
+            set(c_factors.keys())).intersection(set(d_factors.keys()))
         for common_prime_factor in common_prime_factors:
             # Find the most times the common factor is shared
-            highest_common_index = min(b_factors[common_prime_factor], c_factors[common_prime_factor], d_factors[common_prime_factor])
+            highest_common_index = min(
+                b_factors[common_prime_factor], c_factors[common_prime_factor], d_factors[common_prime_factor])
             common_factor = common_prime_factor ** highest_common_index
             self.b = int(self.b / common_factor)
             self.c = int(self.c / common_factor)
             self.d = int(self.d / common_factor)
         return
 
+
 if __name__ == "__main__":
     max_num = 10000
     periods = []
-    irrational_roots = [x for x in range(max_num + 1) if int(sqrt(x)) * int(sqrt (x)) != x]
+    irrational_roots = [x for x in range(
+        max_num + 1) if int(sqrt(x)) * int(sqrt(x)) != x]
     for number in irrational_roots:
         cfsr = ContinuedFractionSquareRoot(number)
         aN = []
         for a in cfsr:
             aN.append(a)
-        period = len(aN) -1 
+        period = len(aN) - 1
         print(str(number) + " has period " + str(period))
-        #print(aN)
+        # print(aN)
         periods += [period]
-    
-    print(len([x for x in periods if x % 2 == 1]))
-        
 
-        
+    print(len([x for x in periods if x % 2 == 1]))

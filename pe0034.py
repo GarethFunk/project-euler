@@ -8,22 +8,24 @@
 
 from pe0020 import factorial
 
-factorials = {0:1,
-              1:factorial(1),  #       1
-              2:factorial(2),  #       2
-              3:factorial(3),  #       6
-              4:factorial(4),  #      24
-              5:factorial(5),  #     120
-              6:factorial(6),  #     720
-              7:factorial(7),  #   5,040
-              8:factorial(8),  #  40,320
-              9:factorial(9)}  # 362,880
+factorials = {0: 1,
+              1: factorial(1),  # 1
+              2: factorial(2),  # 2
+              3: factorial(3),  # 6
+              4: factorial(4),  # 24
+              5: factorial(5),  # 120
+              6: factorial(6),  # 720
+              7: factorial(7),  # 5,040
+              8: factorial(8),  # 40,320
+              9: factorial(9)}  # 362,880
+
 
 def nines(n):
     s = ""
     for i in range(n):
         s += "9"
     return int(s)
+
 
 def findN():
     num_digits = 1
@@ -49,6 +51,7 @@ def digitfactorialsum(n):
     else:
         return False
 
+
 if __name__ == "__main__":
     N = findN()
     print(N)
@@ -57,4 +60,3 @@ if __name__ == "__main__":
         if digitfactorialsum(i):
             sumdfs += i
     print(sumdfs)
-

@@ -1,5 +1,6 @@
 from lib import factors, isprime
 
+
 def primeFactors(n, conv=False):
     prime_factors = {}
     for pair in factors(n):
@@ -12,7 +13,7 @@ def primeFactors(n, conv=False):
     while prod != n:
         quotient = n/prod  # i.e. what we still need to represent with the prime factors
         for prime_factor in prime_factors:
-            if quotient%prime_factor == 0:
+            if quotient % prime_factor == 0:
                 prod = prod * prime_factor
                 prime_factors[prime_factor] += 1
     if conv is False:
@@ -28,7 +29,7 @@ def primefactorconverter(pfs):
     for pf in pfs:
         converted.append(pf**pfs[pf])
     return set(converted)
-    
+
 
 if __name__ == "__main__":
     nums = []

@@ -5,17 +5,20 @@
 coins = [200, 100, 50, 20, 10, 5, 2, 1]
 
 # i is the place to start searching in the list
+
+
 def waystomake(n, i=0):
     if n == 0:
         return [[0, 0, 0, 0, 0, 0, 0, 0]]
     ways = []
-    for j in  range(i, len(coins)):
-        if coins[j] <=n:
+    for j in range(i, len(coins)):
+        if coins[j] <= n:
             way = [0, 0, 0, 0, 0, 0, 0, 0]
             way[j] += 1
             for way_for_n_minus_coin in waystomake(n-coins[j], j):
                 ways.append(addways(way, way_for_n_minus_coin))
     return ways
+
 
 def addways(w1, w2):
     way = []

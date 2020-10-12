@@ -4,14 +4,16 @@ from pe0064 import ContinuedFractionSquareRoot
 # x2 – Dy2 = 1
 # X = x2; Y = y2
 
+
 class ContinuedFractionSquareRootEndless():
     def __init__(self, n):
         cfsr = ContinuedFractionSquareRoot(n)
         self.aN = []
         for a in cfsr:
             self.aN.append(a)
-    
+
         self.repeating_length = len(self.aN) - 1
+
     def __iter__(self):
         self.call_count = 0
         return self
@@ -29,6 +31,7 @@ class ContinuedFractionSquareRootEndless():
         self.call_count += 1
         return a
 
+
 class ContinuedFractionSquareRootConvergents():
     def __init__(self, n):
         self.a = ContinuedFractionSquareRootEndless(n)
@@ -39,7 +42,7 @@ class ContinuedFractionSquareRootConvergents():
         self.n = 2  # actually 0 but we need -1 and -2 for the startup
         self.a.__iter__()
         return self
-        
+
     def __next__(self):
         an = self.a.__next__()
         hn = (an * self.h[self.n-1]) + self.h[self.n-2]
@@ -49,6 +52,7 @@ class ContinuedFractionSquareRootConvergents():
         self.n += 1
         return hn, kn
 
+
 def DiophantineQuadraticSolver(D):
     if int(sqrt(D))**2 == D:
         return 0, 0
@@ -57,6 +61,7 @@ def DiophantineQuadraticSolver(D):
     for pN, qN in cfsr:
         if (pN ** 2) - (D * (qN ** 2)) == 1:
             return pN, qN
+
 
 if __name__ == "__main__":
     biggest_x = 0
@@ -69,5 +74,3 @@ if __name__ == "__main__":
             corresponding_D = D
 
 print(corresponding_D)
-
-

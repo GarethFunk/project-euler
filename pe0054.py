@@ -2,6 +2,7 @@ class PlayingCard():
     def __init__(self, card_code, ace_high=True):
         self.value = self.valueconverter(card_code[0], ace_high)
         self.suit = card_code[1]
+
     def valueconverter(self, value, ace_high):
         numerical = 0
         if value == "A":
@@ -20,6 +21,7 @@ class PlayingCard():
         else:
             numerical = int(value)
         return numerical
+
 
 class PokerHand():
     def __init__(self, hand_codes, ace_high=True):
@@ -75,7 +77,7 @@ class PokerHand():
 
     def isflush(self):
         suit = self.cards[0].suit
-        self.flush = True  # Assume true and try to disprove it
+        self.flush = True  #  Assume true and try to disprove it
         for card in self.cards[1:]:
             if card.suit != suit:
                 self.flush = False
@@ -85,7 +87,7 @@ class PokerHand():
     def isstraight(self):
         # This relies on the fact we sorted the cards by value in the constructor
         count = self.cards[0].value
-        self.straight = True  # Assume true and try to disprove it
+        self.straight = True  #  Assume true and try to disprove it
         for card in self.cards[1:]:
             count += 1
             if card.value != count:
@@ -145,7 +147,7 @@ class PokerHand():
             self.score[0] = 1
             self.score[1] = max(self.cards, key=lambda x: x.value).value
         return
-    
+
     def __gt__(self, other):
         if isinstance(other, PokerHand) is False:
             raise TypeError
@@ -166,6 +168,7 @@ class PokerHand():
                 return False
         return False
 
+
 if __name__ == '__main__':
     p1_wins = 0
     f = open("pe0054_poker.txt")
@@ -176,5 +179,3 @@ if __name__ == '__main__':
             p1_wins += 1
     f.close()
     print(p1_wins)
-            
-            

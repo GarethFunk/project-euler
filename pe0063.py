@@ -1,7 +1,9 @@
 from itertools import count
 
+
 def digitCount(n):
     return len(str(n))
+
 
 if __name__ == "__main__":
     number_of_n_digit_nth_powers = 0

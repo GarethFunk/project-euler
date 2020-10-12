@@ -1,11 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def decode(encoded, key=None):
     if key is None:
         return [str(unichr(int(x))) for x in encoded]
     else:
-        return [char^key.next() for char in encoded]
+        return [char ^ key.next() for char in encoded]
 
 
 class password:
@@ -24,15 +25,16 @@ class password:
         return self
 
     def next(self):
-        ret = self.pwd[self.i%self.length]
+        ret = self.pwd[self.i % self.length]
         self.i += 1
         return ret
-    
+
     def reset(self):
         self.i = 0
-    
+
     def __str__(self):
         return "".join([str(unichr(char)) for char in self.pwd])
+
 
 if __name__ == "__main__":
     with open("pe0059_cipher.txt") as f:
@@ -41,7 +43,7 @@ if __name__ == "__main__":
     cipher = raw_cipher.split(",")
     cipher = [int(x) for x in cipher]
     print(len(cipher))
-    #print(cipher)
+    # print(cipher)
     # let's plot a character histogram and see which characters are most common
     plt.hist(cipher, bins=list(range(max(cipher))))
     plt.show()
@@ -61,21 +63,22 @@ if __name__ == "__main__":
                 c += 97
                 pwd = password([a, b, c])
                 decoded = decode(cipher, pwd)
-                count, bins = np.histogram(decoded, bins=list(range(max(decoded))))
+                count, bins = np.histogram(
+                    decoded, bins=list(range(max(decoded))))
                 del decoded
                 most_common_char = bins[np.argmax(count)]
                 if most_common_char == 32:
-                        pwd.reset()
-                        good_pwds.append(pwd)
+                    pwd.reset()
+                    good_pwds.append(pwd)
                 else:
                     del pwd
-    print(len(good_pwds)) # length is 615 (down from 17,576)
-    
+    print(len(good_pwds))  # length is 615 (down from 17,576)
+
     # Let's run through them
     for pwd in good_pwds:
-        #print(str(pwd))
+        # print(str(pwd))
         #print("".join(decode(decode(cipher, pwd))))
-        #raw_input()
+        # raw_input()
         pass
 
     # Having found the password we can now calulate the sum

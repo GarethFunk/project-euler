@@ -10,4 +10,3 @@ while len(str(curr)) < 1000:
     i += 1
 
 print(i)
-

@@ -7,6 +7,7 @@ from copy import deepcopy
 
 from pe0003 import isprime
 
+
 def getprimes(n=None, below=None):
     primes = [2]
     num = 3
@@ -21,6 +22,7 @@ def getprimes(n=None, below=None):
                 primes.append(num)
             num += 2
     return primes
+
 
 if __name__ == "__main__":
     # First get a list of all prime numbers below 1,000,000

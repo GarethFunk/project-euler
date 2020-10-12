@@ -1,5 +1,6 @@
 from pe0003 import isprime
 
+
 def rotate(s):
     rotated = ""
     for i in range(len(s)):
@@ -15,6 +16,7 @@ def iscircularprime(n):
         s = rotate(s)
     return True
 
+
 if __name__ == "__main__":
     primes = [2]
     for i in range(3, 1000000, 2):
@@ -27,5 +29,4 @@ if __name__ == "__main__":
             circular_primes.append(prime)
 
     # print(circular_primes)
-    print(len(circular_primes))        
-
+    print(len(circular_primes))

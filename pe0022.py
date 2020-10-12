@@ -17,6 +17,3 @@ for i, name in enumerate(names, 1):
     scores.append(s*i)
 
 print(sum(scores))
-
-
-    

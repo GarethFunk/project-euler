@@ -1,5 +1,6 @@
 from lib import factors
 
+
 def d(n):
     # Sum of proper divisors of n
     s = 0
@@ -9,12 +10,13 @@ def d(n):
             # count divisors only once
             s += pair[0]
         elif pair[0] == 1:
-            # Don't add n 
+            # Don't add n
             s += pair[0]
         else:
             s += pair[0]
             s += pair[1]
     return s
+
 
 if __name__ == "__main__":
     amicables = {}
@@ -23,8 +25,5 @@ if __name__ == "__main__":
             b = d(a)
             if b != a and d(b) == a:
                 # These numbers are amicable
-                amicables.update({a:a, b:b})
+                amicables.update({a: a, b: b})
     print(sum(amicables.values()))
-            
-    
-    

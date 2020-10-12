@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# https://en.wikipedia.org/wiki/Continued_fraction#Regular_patterns_in_continued_fractions 
+# https://en.wikipedia.org/wiki/Continued_fraction#Regular_patterns_in_continued_fractions
 # There is a pattern in the contiued fraction coefficients for e
 class ContinuedFractionE:
     def __init__(self, max_terms=10):
@@ -20,7 +20,7 @@ class ContinuedFractionE:
             self.start = False
             val = 2
         else:
-            self.sub_period +=1
+            self.sub_period += 1
             if self.sub_period == 1:
                 val = 1
             elif self.sub_period == 2:
@@ -31,7 +31,6 @@ class ContinuedFractionE:
                 val = 1
         self.terms += 1
         return val
-
 
 
 if __name__ == "__main__":

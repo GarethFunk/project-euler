@@ -1,5 +1,6 @@
 from decimal import *
 
+
 class fraction():
     def __init__(self, num, den):
         self.numerator = num
@@ -7,7 +8,7 @@ class fraction():
         self.cancelnumerator = 0
         self.canceldenominator = 1
         self.foolishcanceled = False
-    
+
     def foolishcancel(self):
         snum = str(self.numerator)
         sden = str(self.denominator)
@@ -26,13 +27,15 @@ class fraction():
         if self.foolishcanceled is True:
             # Now let's check if the foolish cancel is actually correct
             decimal1 = Decimal(self.numerator)/Decimal(self.denominator)
-            decimal2 = Decimal(self.cancelnumerator)/Decimal(self.canceldenominator)
+            decimal2 = Decimal(self.cancelnumerator) / \
+                Decimal(self.canceldenominator)
             if decimal1 == decimal2:
                 # The foolish cancel was actually correct!
-                print(str(self.numerator) + "/" + str(self.denominator) + " = " +  str(self.cancelnumerator) + "/" + str(self.canceldenominator))
+                print(str(self.numerator) + "/" + str(self.denominator) + " = " +
+                      str(self.cancelnumerator) + "/" + str(self.canceldenominator))
                 return True
         return False
-        
+
 
 def getfractions():
     # We want to return all two digit numerator and denominator fractions less than 1

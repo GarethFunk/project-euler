@@ -1,17 +1,19 @@
 
 def pandigital(s):
     if len(s) != 9:
-        return False 
+        return False
     for digit in "123456789":
         if digit not in s:
             return False
     return True
+
 
 def concatencatedproduct(x, n):
     retval = ""
     for i in range(1, n+1):
         retval += str(x * i)
     return retval
+
 
 if __name__ == "__main__":
     maxval = 0

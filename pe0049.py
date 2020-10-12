@@ -2,11 +2,12 @@
 # permutations of each other and are equispaced.
 # We could run through all 4-digit numbers starting at 1000
 # finding all permutations of digits (24 of them) the rule out
-# those which are not prime. Then look for three which are equispaced 
+# those which are not prime. Then look for three which are equispaced
 
 from itertools import permutations
 
 from pe0003 import isprime
+
 
 def findequispaced(nums):
     # Start assuming the first number is in the equispaced sequence

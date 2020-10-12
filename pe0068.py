@@ -1,5 +1,5 @@
-# a 16 digit string is formed by putting the only 2 digit number, 10, 
-# in one of the outer rings, otherwise it would be double counted forming 
+# a 16 digit string is formed by putting the only 2 digit number, 10,
+# in one of the outer rings, otherwise it would be double counted forming
 # a 17 digit string
 
 # There are 10! (=~3.6million) ways to put the digits (not all will be valid)
@@ -12,21 +12,22 @@
 # and find the longest string
 
 def FiveGonRing(a, b, c, d, e, f, g, h, i, j):
-        # a, b, c, d, e = the outer five points
-        # f, g, h, i, j = the inner five points (corresponding)
-        # Thus the five triplets are:
-        # a, f, g 
-        # b, g, h
-        # c, h, i
-        # d, i, j
-        # e, j, f
-        # These five triplets form a Solution Set
-        # A Solution Set is valid iff all members sum to the same value
-        return frozenset([(a, f, g),
-                          (b, g, h),
-                          (c, h, i),
-                          (d, i, j),
-                          (e, j, f)])
+    # a, b, c, d, e = the outer five points
+    # f, g, h, i, j = the inner five points (corresponding)
+    # Thus the five triplets are:
+    # a, f, g
+    # b, g, h
+    # c, h, i
+    # d, i, j
+    # e, j, f
+    # These five triplets form a Solution Set
+    # A Solution Set is valid iff all members sum to the same value
+    return frozenset([(a, f, g),
+                      (b, g, h),
+                      (c, h, i),
+                      (d, i, j),
+                      (e, j, f)])
+
 
 def Valid(fivegonring):
     # Check sums are equal
@@ -40,6 +41,7 @@ def Valid(fivegonring):
                 return False
     return True
 
+
 def StringFiveGonRing(fivegonring):
     # Need to figure out the order again
     lines = list(fivegonring)
@@ -52,7 +54,8 @@ def StringFiveGonRing(fivegonring):
                 ordered_fivegonring.append(line)
                 lines.remove(line)
                 break
-    string = "".join(["".join([str(s) for s in list(x)]) for x in ordered_fivegonring])
+    string = "".join(["".join([str(s) for s in list(x)])
+                      for x in ordered_fivegonring])
     return string
 
 

@@ -11,6 +11,7 @@ def digitnthpower(num, n):
         digit_sum += int(c)**n
     return digit_sum == num
 
+
 if __name__ == "__main__":
     digit_powers = []
     for i in range(10, 10000000):

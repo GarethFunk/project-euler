@@ -5,7 +5,6 @@ def distinctpowers(n):
         for b in range(2, n+1):
             powers.append(a**b)
     return len(set(powers))
-            
 
 
 if __name__ == "__main__":

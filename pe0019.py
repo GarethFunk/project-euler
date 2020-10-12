@@ -11,17 +11,19 @@ def daysinmonth(year, month):
     else:
         return 31
 
+
 def leapyear(year):
-    if year%100 == 0:
+    if year % 100 == 0:
         # is a centruty
-        if year%400 == 0:
+        if year % 400 == 0:
             return True
         else:
             return False
-    elif year%4 == 0:
+    elif year % 4 == 0:
         return True
     else:
         return False
+
 
 def tomorrow(day, date, month, year):
     if day < 7:
@@ -42,12 +44,12 @@ def tomorrow(day, date, month, year):
             if leapyear(year):
                 print(str(year) + " was a leap year")
     return day, date, month, year
-        
+
 
 year = 1900
 month = 1
 date = 1
-day = 1 # 1 = mon, 2 = tue etc.
+day = 1  # 1 = mon, 2 = tue etc.
 num_sundays_on_first = 0
 
 while year < 2001:

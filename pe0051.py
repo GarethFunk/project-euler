@@ -3,6 +3,7 @@ from itertools import combinations, combinations_with_replacement
 
 from pe0003 import isprime
 
+
 def digitreplace(n, checkprime=False):
     # This function will return all possible digit replacements
     # excluding replacing all digits
@@ -32,14 +33,15 @@ def digitreplace(n, checkprime=False):
                 new_numbers.append(this_pattern)
     return new_numbers
 
+
 if __name__ == "__main__":
     # Iterating one at a time will lead to a LOT of re-doing the same calculations
     # possible digit replacements of 10 are 1* and *0
     # possible digit replacements of 11 are 1* and *1
-    # This is too intensive. We need to generate sequences we know will not re-do 
+    # This is too intensive. We need to generate sequences we know will not re-do
     # the same calculations.
     # For 2 digit numbers this means passing in [1-9]* and *[0-9]
-    # For 3 digit numbers this means passing in [1-9]*[0-9], [1-9][0-9]*, *[0-9][0-9], **[0-9], *[0-9]* and[1-9]** 
+    # For 3 digit numbers this means passing in [1-9]*[0-9], [1-9][0-9]*, *[0-9][0-9], **[0-9], *[0-9]* and[1-9]**
     num_digits = 2
     found = False
     digits = list("0123456789")
@@ -63,7 +65,8 @@ if __name__ == "__main__":
                     number = int("".join(trial_pattern))
                     new_prime_numbers = digitreplace(number, checkprime=True)
                     try:
-                        longest_length = len(max(new_prime_numbers, key=lambda x: len(x)))
+                        longest_length = len(
+                            max(new_prime_numbers, key=lambda x: len(x)))
                     except ValueError:
                         # If max() is passed []
                         longest_length = 0
@@ -71,4 +74,3 @@ if __name__ == "__main__":
                         found = True
                         print(max(new_prime_numbers, key=lambda x: len(x)))
         num_digits += 1
-

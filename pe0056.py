@@ -6,6 +6,7 @@ def digitsum(n):
         digsum += int(digit)
     return digsum
 
+
 if __name__ == "__main__":
     maxdigsum = 0
     for a in range(1, 100):
